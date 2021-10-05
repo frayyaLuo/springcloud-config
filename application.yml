@@ -42,6 +42,9 @@ eureka:
     client:
       serviceUrl:
         defaultZone: http://eureka7001.com:7001/eureka
+    instance:
+    prefer-ip-address: true
+    instanceId: microservicecloud-config-3300
 
 ---
 server:
@@ -54,4 +57,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://eureka7002.com:7002/eureka
+  instance:
+    prefer-ip-address: true
+    instanceId: microservicecloud-config-3301
 

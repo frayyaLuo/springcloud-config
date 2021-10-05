@@ -1,0 +1,43 @@
+# application.yml
+server:
+  port: 3344
+spring:
+  application:
+    name: microservicecloud-config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    prefer-ip-address: true
+    instanceId: microservicecloud-config-3344
+---
+server:
+  port: 3300
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-config-client-dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+  prefer-ip-address: true
+  instanceId: microservicecloud-config-dev3300
+
+---
+server:
+  port: 3301
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-config-client-test
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka7002.com:7002/eureka
+  instance:
+    prefer-ip-address: true
+    instanceId: microservicecloud-config-test3301
+

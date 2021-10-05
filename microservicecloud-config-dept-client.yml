@@ -36,7 +36,7 @@ info:
   build.artifactId: $project.artifactId$
   build.version: $project.version$
   
---
+---
 spring:
   profiles: dev
   datasource:

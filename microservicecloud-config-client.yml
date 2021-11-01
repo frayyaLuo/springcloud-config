@@ -11,8 +11,8 @@ eureka:
   instance:
     prefer-ip-address: true
     instanceId: microservicecloud-config-3344
- Hystrix:
-    enable: true
+Hystrix:
+  enable: true
 ---
 server:
   port: 3300
